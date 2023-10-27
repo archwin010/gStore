@@ -1142,9 +1142,23 @@ form.search button:hover {
     overflow: hidden;
     margin: 0 2em 2em 0;
 }
-
-
-
+.products :is(.swiper-button-next, .swiper-button-prev) {
+    outline: 0;
+    color: var(--secondary-dark-color);
+    transition: var(--trans-background), transform .3s;
+}
+.products .big-image:hover .swiper-button-next {
+    transform: translateX(10px);
+}
+.products .big-image:hover .swiper-button-prev {
+    transform: translateX(-10px);
+}
+.products :is(.swiper-button-next, .swiper-button-prev)::after {
+    font-size: 1.5em;
+}
+.products .big-image:hover :is(.swiper-button-next, .swiper-button-prev) {
+    background-color: var(--light-bg-color);
+}
 
 
 
@@ -1157,6 +1171,17 @@ form.search button:hover {
 @media screen and (min-width: 481px) {
     .products.main .item {
         flex: 0 0 50%;
+    }
+
+    /* page single */
+    .products.one .big-image {
+        margin-bottom: 2em;
+    }
+    .products.one .image-show {
+        height: 680px;
+    }
+    .products.one .thumbnail-show {
+        height: 160px;
     }
 }
 
