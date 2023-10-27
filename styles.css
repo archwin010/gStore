@@ -1076,6 +1076,14 @@ form.search button:hover {
 }
 
 
+/* PAGE SINGLE - Department Menu */
+.page-home .dpt-cat .dpt-trigger, 
+.dpt-trigger .ri-close-line  {
+    display: none;
+}
+.showdpt .dpt-trigger .ri-close-line {
+    display: block;
+}
 
 
 
