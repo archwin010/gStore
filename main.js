@@ -94,9 +94,3 @@ var productBig = new Swiper ('.big-image', {
     }
 })
 
-// lightbox
-var lightbox = new FsLightbox();
-lightbox.props.sources = ["/assets/products/shoe1.jpg", "/assets/products/shoe1-1.jpg", "/assets/products/shoe1-2.jpg", "/assets/products/shoe1-3.jpg"];
-lightbox.open();
-lightbox.close();
-lightbox.open(0); // Opens the lightbox at the slide number 2.
