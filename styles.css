@@ -1071,10 +1071,10 @@ form.search button:hover {
     opacity: 0;
     will-change: visibility, opacity;
 }
-:where(.showmenu, .showmodal) .overlay {
+/* :where(.showmenu, .showmodal) .overlay {
     opacity: 1;
     visibility: inherit;
-}
+} */
 
 
 /* PAGE SINGLE - Department Menu */
