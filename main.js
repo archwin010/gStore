@@ -105,26 +105,7 @@ for (let x = 0; x < stocks.length; x++) {
     stocks[x].querySelector('.available').style.width = percent + '%';
 }
 
-// for filter on the category page
-const FtoShow = '.filter';
-const Fpopup = document.querySelector(FtoShow);
-const Ftrigger = document.querySelector('.filter-trigger');
 
-Ftrigger.addEventListener('click', () => {
-    setTimeout(() => {
-        if(!Fpopup.classList.contains('show')) {
-            Fpopup.classList.add('show')
-        }
-    }, 250 )
-})
-
-// auto close by click outside .filter
-document.addEventListener('click', (e) => {
-    const isClosest = e.target.closest(FtoShow);
-    if(!isClosest && Fpopup.classList.contains('show')) {
-        Fpopup.classList.remove('show')
-    }
-})
 
 // to show cart on click
 const divtoShow = '.mini-cart';
@@ -133,11 +114,16 @@ const divTrigger = document.querySelector('.cart-trigger');
 
 divTrigger.addEventListener('click', () => {
     setTimeout(() => {
-        if(!divPopup.classList.contains('show')) {
+        if (!divPopup.classList.contains('show')) {
+            // The popup is currently hidden, so show it
             divPopup.classList.add('show');
+        } else {
+            // The popup is currently visible, so hide it
+            divPopup.classList.remove('show');
         }
-    }, 250 )
-})
+    }, 250);
+});
+
 
 // to close cart on click outside
 document.addEventListener('click', (e) => {
@@ -145,4 +131,12 @@ document.addEventListener('click', (e) => {
     if(!isClosest && divPopup.classList.contains('show')) {
         Fpopup.classList.remove('show')
     }
+})
+
+// show modal on load
+window.onload = function () {
+    document.querySelector('.site').classList.toggle('showmodal')
+}
+document.querySelector('.modalclose').addEventListener('click', function() {
+    document.querySelector('.site').classList.remove('showmodal')
 })
