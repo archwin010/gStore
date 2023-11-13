@@ -1071,7 +1071,7 @@ form.search button:hover {
     opacity: 0;
     will-change: visibility, opacity;
 }
-:where(.showmenu, .showmodal) .overlay {
+.showmenu .overlay {
     opacity: 1;
     visibility: inherit;
 }
